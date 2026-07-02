@@ -1,0 +1,54 @@
+{
+  "expo": {
+    "name": "Sentivo",
+    "slug": "sentivo",
+    "owner": "relayt",
+    "version": "1.1.0",
+    "orientation": "default",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "uz.relayt.sentivo"
+    },
+    "android": {
+      "package": "uz.relayt.sentivo",
+      "versionCode": 2,
+      "usesCleartextTraffic": true,
+      "googleServicesFile": "./google-services.json",
+      "adaptiveIcon": {
+        "backgroundColor": "#FFFFFF",
+        "foregroundImage": "./assets/adaptive-icon.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-secure-store",
+      "expo-font",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Scan the pairing QR shown on your laptop to connect."
+        }
+      ],
+      "expo-sharing",
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Save Sentivo screenshots and photos to your gallery.",
+          "savePhotosPermission": "Save Sentivo screenshots and photos to your gallery.",
+          "isAccessMediaLocationEnabled": false
+        }
+      ],
+      "expo-notifications"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "a3d957ac-c566-45ef-af52-08f40e29799d"
+      }
+    }
+  }
+}

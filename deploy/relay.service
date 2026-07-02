@@ -1,0 +1,18 @@
+[Unit]
+Description=Control relay
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+WorkingDirectory=/opt/control
+EnvironmentFile=/etc/control/relay.env
+ExecStart=/opt/control/relay
+Restart=always
+RestartSec=3
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/opt/control
+ProtectHome=true
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,24 @@
+apply plugin: 'com.android.library'
+
+group = 'expo.modules.screencast'
+version = '0.1.0'
+
+def expoModulesCorePlugin = new File(project(":expo-modules-core").projectDir.absolutePath, "ExpoModulesCorePlugin.gradle")
+apply from: expoModulesCorePlugin
+applyKotlinExpoModulesCorePlugin()
+useCoreDependencies()
+useExpoPublishing()
+
+android {
+  namespace "expo.modules.screencast"
+  compileSdkVersion rootProject.hasProperty("compileSdkVersion") ? rootProject.compileSdkVersion : 35
+
+  defaultConfig {
+    minSdkVersion 24
+    targetSdkVersion rootProject.hasProperty("targetSdkVersion") ? rootProject.targetSdkVersion : 35
+  }
+
+  lintOptions {
+    abortOnError false
+  }
+}

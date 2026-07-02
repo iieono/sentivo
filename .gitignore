@@ -1,0 +1,19 @@
+# Secrets & runtime state — NEVER commit these
+config.json
+*.env
+relay.env
+cert.pem
+key.pem
+fingerprint.txt
+accounts.json
+accounts.json.tmp
+
+# Build output
+/dist/
+*.exe
+*.test
+*.out
+
+# OS cruft
+.DS_Store
+Thumbs.db
